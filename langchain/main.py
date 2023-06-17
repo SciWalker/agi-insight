@@ -17,11 +17,11 @@ embeddings = OpenAIEmbeddings(disallowed_special=())
 
 pinecone.init(
     api_key=os.environ['PINECONE_API_KEY'],
-    environment='us-east1-gcp'
+    environment='us-west1-gcp-free'
 )
 
 
-root_dir = '../Auto-GPT-Plugins/'
+root_dir = '../openai-handler/src'
 docs = []
 for dirpath, dirnames, filenames in os.walk(root_dir):
     for file in filenames:
@@ -37,14 +37,14 @@ text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(docs)
 print(texts)
 vector_store = Pinecone(
-    index=pinecone.Index('pinecone-index'),
+    index=pinecone.Index('pinecone'),
     embedding_function=embeddings.embed_query,
     text_key='text',
-    namespace='algorithm'
+    namespace='openai-algorithm'
 )
 vector_store.from_documents(
     documents=texts, 
     embedding=embeddings,
-    index_name='pinecone-index',
-    namespace='twitter-algorithm'
+    index_name='pinecone',
+    namespace='openai-algorithm'
 )

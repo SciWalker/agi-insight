@@ -15,8 +15,8 @@ with open(message_list_path, "r") as file:
 
 print(retrieved_data)
 chatgpt_script_res=openai.ChatCompletion.create(
-  # model="gpt-3.5-turbo",
-  model="gpt-4",
+  model="gpt-3.5-turbo",
+  # model="gpt-4",
   messages=retrieved_data
 )
 
