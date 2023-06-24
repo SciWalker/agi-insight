@@ -17,4 +17,19 @@ with open(message_list_path, "r") as file:
 # Modify the JSON data to fix the syntax error
 
 retrieved_data = ast.literal_eval(retrieved_data)
-print(f"retrieved_data: {retrieved_data}")
+print(type(retrieved_data[4]))
+print(retrieved_data[4]['content'])
+#convert the content dictionary to string
+string_data = json.dumps(retrieved_data[1])
+
+#modify the content string to replace \n with \\n
+for item in retrieved_data:
+    item["content"] = item["content"]
+    # item["content"] = json.loads(item["content"])
+with open("../output/retrieved_data.txt", "w") as file:
+    file.write(string_data)
+# #save retrieved_data to a text file
+# with open("../output/retrieved_data.txt", "w") as file:
+#     #use json.dumps with indent=4
+#     file.write(json.dumps(retrieved_data, indent=4))
+#     print(json.dumps(retrieved_data, indent=4))

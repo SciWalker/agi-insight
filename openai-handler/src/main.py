@@ -47,15 +47,13 @@ chatgpt_script_res=openai.ChatCompletion.create(
 
 response_text = chatgpt_script_res['choices'][0]['message']
 print(f"response_text: {type(response_text)}")
+print(response_text)
 # Replace \n with actual new lines
 formatted_response = response_text['content'].replace('\\n', '\n')
 
 # Save the formatted content to a file
 with open("../output/formatted_response.txt", "w") as file:
     file.write(formatted_response)
-
-
-
 
 retrieved_data.append(response_text)
 
@@ -69,6 +67,7 @@ with open(message_list_path, "r") as file:
 
 print(retrieved_data)
 formatted_response
+
 #save the message_list to a text file
 # with open(message_list_path, 'w') as f:
 #     for item in message_list:
