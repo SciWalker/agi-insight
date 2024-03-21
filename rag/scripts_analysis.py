@@ -9,7 +9,7 @@ from llmware.configs import LLMWareConfig
 from llmware.models import ModelCatalog
 
 
-def contract_analysis_on_laptop (model_name,fp,file_to_be_analyzed):
+def analysis_on_laptop (model_name,fp,file_to_be_analyzed):
 
 
 
@@ -81,4 +81,4 @@ if __name__ == "__main__":
     print(list_path)
     for key in list_path:
         print(key)
-        contract_analysis_on_laptop("mistral",key,list_path[key])
+        analysis_on_laptop("mistral",key,list_path[key])

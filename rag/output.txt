@@ -1,0 +1,43 @@
+ Oh, John Calvin and his teachings of grace
+A man who changed the course of our days
+His doctrine of predestination
+Shook the foundations of religious convention
+
+His books, like the Bible, became classics
+Guiding principles that shaped our faith's tracks
+The works of his son, Pierre, too
+Provided insight into theology anew
+
+His legacy lives on in Protestant churches
+His teachings continue to influence us
+John Calvin and his impact on history
+Is a testament to human wisdom.
+
+
+In the realm of Artificial Intelligence (AI) development, there exist three distinct algorithms named after John Calvin: The Predestination Algorithm, The Graceful Programming Algorithm, and The Reformation Learning Algorithm. These algorithms have different uses based on their creators' personal beliefs, much like how John Calvin's teachings had a profound impact across various aspects of society during the Reformation period.
+
+The developers who created these algorithms each used one specific programming language: C++, Python, or Java. However, they did not follow the usual rules, and each developer selected a different language to create an algorithm, despite having the same personal beliefs inspired by John Calvin's teachings.
+
+Consider the following facts:
+1. The Predestination Algorithm was not created by the Python Developer. 
+2. The Java Developer is not inspired by John Calvin's doctrine of predestination.
+3. The Graceful Programming Algorithm is the most recent one developed and it wasn't created in C++ or Java.
+4. The Reformation Learning Algorithm is older than the algorithm in C++ but younger than the one written in Python.
+5. The Algorithm in C++ was created before the algorithm written in Python, but after the one inspired by John Calvin's teachings about Grace.
+6. The Java Developer created an algorithm that was developed earlier than the Predestination Algorithm.
+
+Question: Determine the language each developer used and order them from oldest to newest.
+
+
+Let's start with the facts about the languages that cannot be used for specific algorithms.
+- Python is not used for Predestination Algorithm, so it can only be used for Graceful Programming or Reformation Learning Algorithm. However, since we know that C++ was created before Python (from fact 5), Python must have been used to develop the Reformation Learning Algorithm. Therefore, C++ cannot be used for Reformation Learning Algorithm but is older than Python.
+- Java is not used for Predestination algorithm and also is not used for Graceful Programming as it is older than C++ (from fact 5). Hence, Java is the language used to develop the Predestination Algorithm. This means that C++ can only be used for Graceful Programming. 
+
+Now let's order them from oldest to newest based on the given facts:
+- The Reformation Learning Algorithm was created first because it's the only one we have no information about its creation age and Python is the last one since it uses Java, which was developed after C++ (from fact 5).
+- Therefore, the Predestination Algorithm must be second in terms of age.
+- Finally, by process of elimination, Graceful Programming Algorithm was developed last. 
+
+Answer: The order from oldest to newest is Reformation Learning Algorithm - Predestination Algorithm - Graceful Programming Algorithm.
+
+

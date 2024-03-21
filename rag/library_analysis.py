@@ -4,14 +4,17 @@ from llmware.retrieval import Query
 from llmware.prompts import Prompt
 from llmware.setup import Setup
 from llmware.models import ModelCatalog
+from llmware.configs import LLMWareConfig
 import time
-library = Library().create_new_library("Test")
+LLMWareConfig().set_active_db("sqlite")
+library = Library().create_new_library("Test1234")
 # sample_files_path = Setup().load_sample_files()
 
 library.add_files(os.path.join("data","check-addon-verif"))
+print(Library().get_all_library_cards())
 
-# library.install_new_embedding(embedding_model_name="all-MiniLM-L6-v2", vector_db="milvus")
-library.install_new_embedding(embedding_model_name="industry-bert-contracts", vector_db="milvus")
+# library.install_new_embedding(embedding_model_name="all-MiniLM-L6-v2", vector_db="faiss")
+library.install_new_embedding(embedding_model_name="industry-bert-contracts", vector_db="faiss")
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false" # Avoid a HuggingFace tokenizer warning
 query_results = Query(library).semantic_query("API", result_count=2)

@@ -22,7 +22,7 @@ def run_ollama_in_docker(model_name,prompt):
 
 def run_ollama_served_in_docker(model_name,prompt):
     docker_command = ["docker", "exec", "-i", "ollama", "ollama", "run", model_name]
-    process = subprocess.run(docker_command, capture_output=True, text=True, input=prompt)
+    process = subprocess.run(docker_command, capture_output=True, text=True, input=prompt, encoding='utf-8')
     if process.returncode == 0:
         print("Command executed successfully.")
         return process.stdout
@@ -68,7 +68,8 @@ def test_docker_output():
 if __name__ == "__main__":
     model_name = "phi"  # Specify your model name
     command = ""  # Specify the command to run with ollama
-    model_name = "your_model_name"
-    prompt = "who are you? are you phi2"
+    prompt = "create a poem about John Calvin and his influence on the Reformation."
     output = run_ollama_served_in_docker(model_name,prompt)
-    print(output)
+    #save output
+    with open("output.txt", "w") as file:
+        file.write(output)
