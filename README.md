@@ -12,3 +12,6 @@ git clone https://github.com/TimDettmers/bitsandbytes.git
 cd bitsandbytes || exit
 make CUDA_VERSION=112  # or 117, depending on the local CUDA version 
 python setup.py install 
+
+- use the following command to run ollama
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
